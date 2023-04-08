@@ -10,8 +10,6 @@ from drf_user.variables import DESTINATION_CHOICES
 from drf_user.variables import EMAIL
 
 
-# TEST COMMIT
-
 class Role(Group):
     """
     A proxy model for Group for renaming Group to Role.
