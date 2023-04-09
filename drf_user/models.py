@@ -45,7 +45,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         blank=True,
     )
-    name = models.CharField(verbose_name=_("Full Name"), max_length=500, blank=False)
+    first_name = models.CharField(_("first name"), max_length=150, blank=True)
+    last_name = models.CharField(_("last name"), max_length=150, blank=True)
     profile_image = models.ImageField(
         verbose_name=_("Profile Photo"), upload_to="user_images", null=True, blank=True
     )
