@@ -73,6 +73,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = "username"
     REQUIRED_FIELDS = ["name", "email"]
 
+    @property
+    def name(self):
+        """
+        Firstname Lastname
+        """
+        return f'{self.first_name} {self.last_name}'
+
     class Meta:
         """Passing model metadata"""
 
